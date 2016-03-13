@@ -1,0 +1,46 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="github-floater" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+        <ul>
+            <li><a href="https://github.com/duythien/meetup" data-toggle="tooltip" data-placement="right" title="Fork this on GitHub"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://github.com/duythien/meetup/issues" data-toggle="tooltip" data-placement="right" title="Report bugs on GitHub"><i class="fa fa-bug"></i></a></li>
+        </ul>
+    </div>
+
+    <header>
+        {% include 'AmsterdamPHPSiteBundle::_header.html.twig' %}
+    </header>
+    {% if header_photo is defined %}
+    <div class="header-photo" style="background-image:url('{{ getMeetupPhotoUrl(header_photo, 'highres') }}')">
+        <div class="gradient">
+            <div class="photo-credits">photo by {{ getMeetupPhotoCredits(header_photo) }}</div>
+            <div class="container">
+                <span>An english-speaking group for <b>PHP</b></span>
+                <span>developers in and around <b>Saigon</b></span>
+            </div>
+        </div>
+    </div>
+    {% else %}
+        <div class="header-photo-placeholder"></div>
+    {% endif %}
+    <div class="container dropshadow offsettop">
+
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <footer>
+            {% include 'AmsterdamPHPSiteBundle::_footer.html.twig' %}
+        </footer>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        $('[data-toggle="tooltip"]').tooltip();
+    </script>
+{% endblock %}

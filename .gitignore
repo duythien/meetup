@@ -1,0 +1,26 @@
+# Bootstrap
+app/bootstrap*
+
+# Symfony directories
+vendor/*
+*/logs/*
+*/cache/*
+web/uploads/*
+web/bundles/*
+bin/
+app/logs/*
+
+# Configuration files
+app/config/parameters.ini
+app/config/parameters.yml
+sftp-config.json
+
+# Misc
+xhprof
+.vagrant
+
+# Bower
+bower_components/*
+
+# npm
+node_modules/*
