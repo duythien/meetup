@@ -19,7 +19,7 @@ class AbstractService {
     /**
      * @var string
      */
-    protected $group;
+    protected $group = 'Engineers-Saigon';
 
     /**
      * @param AbstractMeetupClient $api
@@ -30,7 +30,7 @@ class AbstractService {
     {
         $this->api   = $api;
         $this->cache = $cache;
-        $this->group = 'Engineers-Saigon';
+        $this->group = $group;
     }
 
     /**
