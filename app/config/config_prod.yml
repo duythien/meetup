@@ -31,6 +31,6 @@ google:
         trackers:
             default:
                 name:      amsphp-analytics
-                accountId: UA-31417159-3
-                domain:    amsterdamphp.nl
+                accountId: XXX-XXX-XXX #TODO
+                domain:    saigonphp.com
                 trackPageLoadTime: true
