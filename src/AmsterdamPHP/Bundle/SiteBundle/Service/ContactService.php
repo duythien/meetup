@@ -51,12 +51,12 @@ class ContactService
         }
 
         $message = \Swift_Message::newInstance()
-            ->setSubject("[AmsPHP Contact] ". $data['subject'])
+            ->setSubject("[SaigonPHP Contact] ". $data['subject'])
             ->setFrom($data['email'], $data['name'])
             ->setReplyTo($data['email'], $data['name'])
-            ->setTo('contact@amsterdamphp.nl')
+            ->setTo('fcduythien@gmail.com')
             ->setBody($this->buildBody($data['message']));
-
+        
         return ($this->mailer->send($message) > 0);
     }
 
@@ -67,7 +67,7 @@ class ContactService
     protected function buildBody($content)
     {
         $body = <<<EOD
-This message was sent using the contact form on amsterdamphp.nl
+This message was sent using the contact form on saigonphp.com
 ----------------------
 
 $content
